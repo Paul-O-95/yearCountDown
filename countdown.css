@@ -80,7 +80,7 @@ h1{
 */
 
 span.turn{
-    animation: turn 0.7s;
+    animation: turn 0.7s ease-in-out forwards;
 }
 @keyframes turn{
     0%{transform: rotateY(300deg);}
