@@ -1,88 +1,119 @@
-body{
-    background: #282e3a;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  background: #282e3a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-h1{
-    color: #fff;
-    text-align: center;
-    font-size: 4.625rem;
-    letter-spacing: 10px;
-    font-style: italic;
-    margin-top: 0;
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 4.625rem;
+  letter-spacing: 10px;
+  font-style: italic;
+  margin-top: 0;
 }
 
 /*
 ================ Styling for the Container holding the CounterTemplate and Labels ======================
  */
 
-#del-countdown{
-    max-width: 70%;
-    margin: 15% auto;
+#del-countdown {
+  max-width: 70%;
+  margin: 15% auto;
 }
 
 /* 
 ================= Styling for the counterTemplate holding the figure/Counts ============================
  */
 
- #clock{
-    display: grid;
-    grid-template-columns: 12fr 12fr 12fr 12fr;
-    grid-gap: 10%;
+#clock {
+  display: grid;
+  grid-template-columns: 12fr 12fr 12fr 12fr;
+  grid-gap: 10%;
 }
-#clock span{
-    min-width: 9.5rem;
-    padding: 20px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 84px;
-    text-align: center;
-    border: 1px solid white;
+#clock span {
+  min-width: 9.5rem;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 84px;
+  text-align: center;
+  border: 1px solid white;
 }
-#clock span:nth-child(1){
-    background: #fa5559;
+#clock span:nth-child(1) {
+  background: #fa5559;
 }
-#clock span:nth-child(2){
-    background: #26c2b9;
+#clock span:nth-child(2) {
+  background: #26c2b9;
 }
-#clock span:nth-child(3){
-    background: #f6bc58;
+#clock span:nth-child(3) {
+  background: #f6bc58;
 }
-#clock span:nth-child(4){
-    background: #2dcb74;
+#clock span:nth-child(4) {
+  background: #2dcb74;
 }
-#clock::after{
-    content: '';
-    display: block;
+#clock::after {
+  content: "";
+  display: block;
 }
 
 /*
 ========================= Styling for the Identifiers/Labels i.e Days, time, minutes, seconds ============================ 
 */
-#units{
-    display: grid;
-    grid-template-columns: 12fr 12fr 12fr 12fr;
-    grid-gap: 15%;
+#units {
+  display: grid;
+  grid-template-columns: 12fr 12fr 12fr 12fr;
+  grid-gap: 15%;
 }
-#units span{
-    width: 7.5rem;
-    color: #ddd;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.7);
-    margin-top: 30px;
+#units span {
+  width: 7.5rem;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.7);
+  margin-top: 30px;
 }
 
 /* 
 ================ Animation styling =============================
 */
 
-span.turn{
-    animation: turn 0.7s ease-in-out forwards;
+span.turn {
+  animation: turn 0.7s ease-in-out forwards;
 }
-@keyframes turn{
-    0%{transform: rotateY(300deg);}
-    100%{transform: rotateY(0deg);}
+@keyframes turn {
+  0% {
+    transform: rotateY(300deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@media (max-width: 1200px) {
+  #clock,
+  #units {
+    grid-template-columns: 12fr 12fr;
+  }
+  #units span {
+    position: relative;
+    top: -10.5rem;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 750px) {
+  #clock,
+  #units {
+    grid-template-columns: 12fr;
+  }
+  #units span {
+    position: relative;
+    top: -28rem;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
 }
